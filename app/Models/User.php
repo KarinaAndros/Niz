@@ -45,6 +45,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    //function for add user
     public function addUser($request){
         $user = new User();
         $user->name = $request->input('name');
@@ -54,6 +55,10 @@ class User extends Authenticatable
         $user->login = $request->input('login');
         $user->password = md5($request->input('password'));
         $user->save();
+
         $user->createToken($request->input('login'));
+
+        $role = new Role();
+        $role->AuthUser($user);
     }
 }
