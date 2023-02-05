@@ -19,7 +19,10 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'surname',
+        'patronymic',
         'email',
+        'login',
         'password',
     ];
 
@@ -41,4 +44,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function addUser($request){
+        $user = new User();
+        $user->name = $request->input('name');
+        $user->surname = $request->input('surname');
+        $user->patronymic = $request->input('patronymic');
+        $user->email = $request->input('email');
+        $user->login = $request->input('login');
+        $user->password = md5($request->input('password'));
+        $user->save();
+        $user->createToken($request->input('login'));
+    }
 }

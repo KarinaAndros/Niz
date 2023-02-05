@@ -6,5 +6,3 @@
     @endauth
     @include('user.form')
 @endsection
-
-fwefewf

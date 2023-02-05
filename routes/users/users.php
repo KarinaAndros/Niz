@@ -2,4 +2,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
-Route::get('/users/registration', [UserController::class, 'registration_form'])->name('registration_form');
+
+Route::controller(UserController::class)->group(function() {
+    Route::get('/users/registration', 'create')->name('user.create');
+    Route::post('/users/registration', 'store')->name('user.store');
+});
+
