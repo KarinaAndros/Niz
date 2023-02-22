@@ -9,6 +9,7 @@
     НижБлог/Регистрация
 @endsection
 @section('content')
+<button type="button" class="btn btn-primary">Test Bootstrap</button>
     <form method="post" name="reg_form">
         <input type="text" name="name" placeholder="Имя">
         <input type="text" name="surname" placeholder="Фамилия">
