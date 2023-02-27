@@ -1,0 +1,11 @@
+body {
+  padding: 0;
+  margin: 0; }
+
+* {
+  box-sizing: border-box; }
+
+#image-background {
+  background-image: url("public/img/background-authorization.png"); }
+
+/*# sourceMappingURL=main.css.map */
