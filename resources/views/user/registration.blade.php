@@ -10,21 +10,28 @@
 @endsection
 @section('content')
     <div id="image-background">
-        <div class="filter-background d-flex">
-            <div class="auth-form-block justify-content-center align-items-center">
-                <div class="h1">Добро пожаловать!</div>
-                <hr/>
+        <div class="filter-background d-flex justify-content-center align-items-center">
+            <div class="auth-form-block">
+                <div class="welcome">Добро пожаловать!</div>
+                <div class="line"></div>
                 <form class="d-block">
-                    <input placeholder="Логин">
-                    <input type="password" placeholder="Пароль">
-                    <a href="">Забыли пароль?</a>
-                    <input type="checkbox"> <span>Запомнить меня</span>
-                    <a href="">
-                        <img src="{{asset('/img/vk-logo.png')}}">
-                        <div>Войти с помощью ВК</div>
-                    </a>
-                    <input type="submit" value="Войти">
+                    <input class="user-field" placeholder="Логин">
+                    <input class="user-field" type="password" placeholder="Пароль">
+                    <div class="forgot-password-field">
+                        <a href="">Забыли пароль?</a>
+                    </div>
+                    <div class="remember-checkbox">
+                        <input type="checkbox"> <span>Запомнить меня</span>
+                    </div>
+                    <div class="vk-btn-wrapper d-flex justify-content-center">
+                        <a href="" class="vk-btn">
+                            <img src="{{asset('/img/vk-logo.png')}}">
+                            <div>Войти с помощью ВК</div>
+                        </a>
+                    </div>
+                    <input class="sign-in-btn" type="submit" value="Войти">
                 </form>
+                <a class="slider-txt" href="">РЕГИСТРАЦИЯ</a>
             <div>
         <div>
     </div>
