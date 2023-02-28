@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'RobotoLight';
+  src: url("../fonts/Roboto/Roboto-Light.ttf"); }
+@font-face {
+  font-family: 'MontserratMedium';
+  src: url("../fonts/Montserrat/static/Montserrat-Medium.ttf"); }
+@font-face {
+  font-family: 'RobotoMedium';
+  src: url("../fonts/Roboto/Roboto-Medium.ttf"); }
+.user-field {
+  width: 100%;
+  height: 51px;
+  background-color: #F4F4F4;
+  border: 1px solid black;
+  border-radius: 12px;
+  margin-bottom: 22px;
+  padding-left: 57px;
+  color: black;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'RobotoLight';
+  line-height: 18.75px; }
+
+.forgot-password-field, .vk-btn div, .continue-btn, .slider-txt {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'RobotoMedium'; }
+
+body {
+  padding: 0;
+  margin: 0; }
+
+* {
+  box-sizing: border-box; }
+
+#image-background {
+  height: 100vh;
+  background-image: url("../img/background-authorization.png");
+  background-size: cover; }
+
+.filter-background {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 15, 46, 0.66); }
+
+.auth-form-block {
+  width: 500px;
+  height: 617px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.83);
+  border-radius: 34px;
+  text-align: center; }
+
+.welcome {
+  font-size: 34px;
+  font-weight: 500;
+  font-family: 'MontserratMedium';
+  color: black;
+  margin-bottom: 10px; }
+
+.line {
+  height: 1px;
+  background-color: black; }
+
+.input-set {
+  margin-top: 45px;
+  margin-bottom: 45px; }
+
+.input-set-2 {
+  margin-top: 27px;
+  margin-bottom: 32px; }
+
+.invalid-feedback-custom-style {
+  margin: 0 0 5.5px;
+  padding-right: 19px;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: 'RobotoMedium';
+  color: #D64848;
+  text-align: right; }
+
+.invalid-input {
+  border: 1px solid #D64848;
+  margin: 0; }
+  .invalid-input::placeholder {
+    color: #D64848; }
+
+.forgot-password-field {
+  text-align: right;
+  margin-bottom: 10px; }
+  .forgot-password-field a {
+    color: #030F2E;
+    text-decoration: none; }
+
+.remember-checkbox {
+  text-align: center;
+  margin-bottom: 45px; }
+  .remember-checkbox span {
+    font-size: 16px;
+    font-weight: 500;
+    color: black; }
+
+.vk-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 18px;
+  padding-right: 33px;
+  gap: 19px;
+  border-radius: 22px;
+  background-color: #4065D6;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 17px; }
+  .vk-btn div {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    color: white; }
+
+.continue-btn {
+  border: none;
+  padding: 18px 32px;
+  background-color: #030F2E;
+  color: white;
+  border-radius: 16px;
+  margin-bottom: 15px; }
+
+.slider-txt {
+  color: black; }
+
+.select-image-block {
+  width: 160px;
+  height: 160px;
+  background-color: #6C6C6C;
+  border-radius: 160px;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 32px; }
+  .select-image-block .input-file {
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+    overflow: hidden;
+    opacity: 0;
+    z-index: -1; }
+  .select-image-block .select-image {
+    width: 160px;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0.82);
+    position: absolute;
+    line-height: 160px;
+    color: white;
+    text-align: center;
+    border-radius: 160px;
+    display: none;
+    cursor: pointer; }
+  .select-image-block:hover .select-image {
+    display: block; }
+
+/*# sourceMappingURL=main.css.map */
