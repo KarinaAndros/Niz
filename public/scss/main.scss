@@ -16,10 +16,11 @@
 //vars
 $main-col: #030F2E;
 $input-col: #F4F4F4;
-$formblock-padding: 65px;
-$form-margin: 25px;
+$formblock-padding: 50px;
+$form-margin: 45px;
 $input-margin: 10px;
 $vk-col: #4065D6;
+$invalid-col: #D64848;
 
 
 //mixins
@@ -43,8 +44,8 @@ $vk-col: #4065D6;
     background-color: $input-col;
     border: 1px solid black;
     border-radius: 12px;
-    margin-bottom: $input-margin;
-    padding-left: 40px;
+    margin-bottom: 22px;
+    padding-left: 57px;
     color: black;
     @include textStyle(16px, 300);
     font-family: 'RobotoLight';
@@ -90,15 +91,35 @@ body{
     height: 1px;
     background-color: black;
 }
-.d-block{
+.input-set{
     margin-top: $form-margin;
+    margin-bottom: $form-margin;
+}
+.input-set-2{
+    margin-top: 27px;
+    margin-bottom: 32px;
 }
 .user-field{
     @extend %text-input;
 }
-.user-field:nth-child(2){
-    margin-bottom: $input-margin - 1px;
+.invalid-feedback-custom-style{
+    margin: 0 0 5.5px;
+    padding-right: 19px;
+    @include textStyle(11px, 500);
+    font-family: 'RobotoMedium';
+    color: $invalid-col;
+    text-align: right;
 }
+.invalid-input{
+    border: 1px solid #D64848;
+    margin: 0;
+    &::placeholder{
+        color: #D64848;
+    }
+}
+//.user-field:nth-child(2){
+//    margin-bottom: $input-margin - 1px;
+//}
 .forgot-password-field{
     @extend %txt-style-roboto-medium;
     text-align: right;
@@ -135,18 +156,45 @@ body{
         color: white;
     }
 }
-.sign-in-btn{
+.continue-btn{
     border: none;
     padding: 18px 32px;
     background-color: $main-col;
     @extend %txt-style-roboto-medium;
     color: white;
     border-radius: 16px;
-    margin-bottom: 28px;
+    margin-bottom: 15px;
 }
-.slider-txt{
+.slider-txt {
     @extend %txt-style-roboto-medium;
     color: black;
+}
+.select-image-block{
+    @include setSizeAndBackground(160px, 160px, #6C6C6C);
+    border-radius: 160px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 32px;
+    .input-file{
+        position: absolute;
+        @include setSize(0.1px, 0.1px);
+        overflow: hidden;
+        opacity: 0;
+        z-index: -1;
+    }
+    .select-image{
+        @include setSizeAndBackground(160px, 160px, rgba(0, 0, 0, 0.82));
+        position: absolute;
+        line-height: 160px;
+        color: white;
+        text-align: center;
+        border-radius: 160px;
+        display: none;
+        cursor: pointer;
+    }
+    &:hover .select-image{
+        display: block;
+    }
 }
 
 

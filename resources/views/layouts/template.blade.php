@@ -6,12 +6,13 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="{{asset('/scss/main.css')}}">
         <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-        <script src="{{asset('scripts/bootstrap.min.js')}}"></script>
-        <script src="{{asset('scripts/jquery-3.6.3.min.js')}}"></script>
         <title>@yield('title')</title>
     </head>
     <body>
         <main>@yield('content')</main>
-        <style src="public/scripts/bootstrap.min.js"></style>
+        <script src="{{asset('scripts/bootstrap.min.js')}}"></script>
+        <script src="{{asset('scripts/jquery-3.6.3.min.js')}}"></script>
+        <script src="{{asset('scripts/selectImage.js')}}"></script>
+        <script src="{{asset('scripts/validator.js')}}"></script>
     </body>
 </html>
